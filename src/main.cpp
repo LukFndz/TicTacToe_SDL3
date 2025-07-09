@@ -1,5 +1,6 @@
 #include "Renderer.h"
 #include "Game.h"
+#include "Animations.h"
 #include <string>
 
 int main(int argc, char* argv[])
@@ -67,8 +68,13 @@ int main(int argc, char* argv[])
 
             }
         }
+
+        float deltaTime = getDeltaTime();
+
+        board.updateAnims(deltaTime);
+
         drawBoard(state, board);
-		SDL_Delay(16); // Roughly 60 FPS
+        SDL_Delay(16);
     }
 
     cleanup(state);

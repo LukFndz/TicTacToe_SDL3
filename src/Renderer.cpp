@@ -52,19 +52,29 @@ void drawBoard(SDLState& state, const Board& board)
 
     for (int row = 0; row < 3; ++row) {
         for (int col = 0; col < 3; ++col) {
-            if (board.cells[row][col] == CellState::Empty)
+
+            const Cell& cell = board.cells[row][col];
+
+            if (cell.state == CellState::Empty)
                 continue;
 
-            SDL_Texture* tex = (board.cells[row][col] == CellState::X) ? state.starTex : state.circleTex;
+            const CellAnimation& anim = cell.animation;
+            float scale = anim.active ? anim.scale : 1.0f;
+            float alpha = anim.active ? anim.alpha : 1.0f;
 
+            SDL_Texture* tex = (cell.state == CellState::X) ? state.starTex : state.circleTex;
+
+            // Calcular tamaño
             SDL_FRect dest = {
-                col * cellW + cellW / 4,
-                row * cellH + cellH / 4,
-                cellW / 2,
-                cellH / 2
+                col * cellW + cellW * (0.5f - 0.25f * scale),
+                row * cellH + cellH * (0.5f - 0.25f * scale),
+                cellW * 0.5f * scale,
+                cellH * 0.5f * scale
             };
 
+            SDL_SetTextureAlphaMod(tex, static_cast<Uint8>(255 * alpha));
             SDL_RenderTexture(state.renderer, tex, nullptr, &dest);
+            SDL_SetTextureAlphaMod(tex, 255); // Reset alpha
         }
     }
 
