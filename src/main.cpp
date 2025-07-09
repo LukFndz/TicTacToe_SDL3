@@ -39,9 +39,8 @@ int main(int argc, char* argv[])
                 }
             }
         }
-
         drawBoard(state, board);
-        SDL_Delay(16); // 
+		SDL_Delay(16); // Roughly 60 FPS
     }
 
     cleanup(state);
