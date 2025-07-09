@@ -1,32 +1,52 @@
-# Prerequisites
-*.d
-
-# Compiled Object files
-*.slo
-*.lo
+# Build artifacts
 *.o
 *.obj
+*.so
+*.dll
+*.dylib
+*.a
+*.lib
+*.exe
+*.app
+*.out
 
-# Precompiled Headers
+# Visual Studio specific
+.vs/
+*.vcxproj*
+*.sln
+*.suo
+*.user
+*.userosscache
+*.sdf
+*.opensdf
+*.VC.db
+*.VC.VC.opendb
+
+# Debug and release folders
+Debug/
+Release/
+x64/
+ipch/
+
+# Precompiled headers
 *.gch
 *.pch
 
-# Compiled Dynamic libraries
-*.so
-*.dylib
-*.dll
+# Generated files
+*.d
 
-# Fortran module files
-*.mod
-*.smod
+# CMake or make
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
 
-# Compiled Static libraries
-*.lai
-*.la
-*.a
-*.lib
+# Logs and temporary
+*.log
 
-# Executables
-*.exe
-*.out
-*.app
+# SDL generated
+*.bmp
+
+# Editor specific
+*.DS_Store
+Thumbs.db
