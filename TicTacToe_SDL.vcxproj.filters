@@ -7,6 +7,5 @@
   <ItemGroup>
     <ClInclude Include="src\Game.h" />
     <ClInclude Include="src\Renderer.h" />
-    <ClInclude Include="src\SDLHelpers.h" />
   </ItemGroup>
 </Project>

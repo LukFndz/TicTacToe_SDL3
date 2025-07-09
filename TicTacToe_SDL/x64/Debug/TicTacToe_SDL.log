@@ -1,7 +1,4 @@
-﻿  Renderer.cpp
-D:\Github - Repositorios\TicTacToe_SDL3\src\Renderer.cpp(7,17): warning C4804: '<': uso no seguro del tipo 'bool' en la operación
-D:\Github - Repositorios\TicTacToe_SDL3\src\Renderer.cpp(45,32): warning C4838: la conversión de 'int' en 'float' requiere una conversión de restricción
-D:\Github - Repositorios\TicTacToe_SDL3\src\Renderer.cpp(45,32): warning C4244: 'inicializando': conversión de 'int' a 'float'; posible pérdida de datos
-D:\Github - Repositorios\TicTacToe_SDL3\src\Renderer.cpp(45,38): warning C4838: la conversión de 'int' en 'float' requiere una conversión de restricción
-D:\Github - Repositorios\TicTacToe_SDL3\src\Renderer.cpp(45,38): warning C4244: 'inicializando': conversión de 'int' a 'float'; posible pérdida de datos
+﻿  main.cpp
+D:\Github - Repositorios\TicTacToe_SDL3\src\main.cpp(34,25): warning C4244: 'inicializando': conversión de 'float' a 'int'; posible pérdida de datos
+D:\Github - Repositorios\TicTacToe_SDL3\src\main.cpp(35,25): warning C4244: 'inicializando': conversión de 'float' a 'int'; posible pérdida de datos
   TicTacToe_SDL.vcxproj -> D:\Github - Repositorios\TicTacToe_SDL3\x64\Debug\TicTacToe_SDL.exe
