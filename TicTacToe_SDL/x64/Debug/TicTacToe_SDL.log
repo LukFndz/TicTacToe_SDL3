@@ -1,0 +1,4 @@
+﻿  main.cpp
+C:\Users\Luk\Desktop\C++\TicTacToe_SDL\src\main.cpp(63,12): warning C4244: '=': conversión de 'int' a 'float'; posible pérdida de datos
+C:\Users\Luk\Desktop\C++\TicTacToe_SDL\src\main.cpp(64,12): warning C4244: '=': conversión de 'int' a 'float'; posible pérdida de datos
+  TicTacToe_SDL.vcxproj -> C:\Users\Luk\Desktop\C++\TicTacToe_SDL\x64\Debug\TicTacToe_SDL.exe
