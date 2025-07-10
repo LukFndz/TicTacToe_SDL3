@@ -12,6 +12,7 @@ struct SDLState
     SDL_Texture* circleTex = nullptr;
 };
 
+void drawWinLine(SDLState& state, const WinInfo& winInfo);
 bool initSDL(SDLState& state, int width, int height);
 void loadTextures(SDLState& state);
 void drawBoard(SDLState& state, const Board& board);

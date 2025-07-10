@@ -1,11 +1,17 @@
-﻿  Renderer.cpp
+﻿  main.cpp
+D:\Github - Repositorios\TicTacToe_SDL3\src\main.cpp(42,25): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+D:\Github - Repositorios\TicTacToe_SDL3\src\main.cpp(43,25): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+  Renderer.cpp
 D:\Github - Repositorios\TicTacToe_SDL3\src\Renderer.cpp(7,17): warning C4804: '<': unsafe use of type 'bool' in operation
-D:\Github - Repositorios\TicTacToe_SDL3\src\Renderer.cpp(45,32): warning C4838: conversion from 'int' to 'float' requires a narrowing conversion
-D:\Github - Repositorios\TicTacToe_SDL3\src\Renderer.cpp(45,32): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
-D:\Github - Repositorios\TicTacToe_SDL3\src\Renderer.cpp(45,38): warning C4838: conversion from 'int' to 'float' requires a narrowing conversion
-D:\Github - Repositorios\TicTacToe_SDL3\src\Renderer.cpp(45,38): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
-  main.cpp
-D:\Github - Repositorios\TicTacToe_SDL3\src\main.cpp(35,25): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
-D:\Github - Repositorios\TicTacToe_SDL3\src\main.cpp(36,25): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+D:\Github - Repositorios\TicTacToe_SDL3\src\Renderer.cpp(45,14): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+D:\Github - Repositorios\TicTacToe_SDL3\src\Renderer.cpp(51,14): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+D:\Github - Repositorios\TicTacToe_SDL3\src\Renderer.cpp(56,14): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+D:\Github - Repositorios\TicTacToe_SDL3\src\Renderer.cpp(56,25): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+D:\Github - Repositorios\TicTacToe_SDL3\src\Renderer.cpp(60,14): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+D:\Github - Repositorios\TicTacToe_SDL3\src\Renderer.cpp(61,22): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+D:\Github - Repositorios\TicTacToe_SDL3\src\Renderer.cpp(91,32): warning C4838: conversion from 'int' to 'float' requires a narrowing conversion
+D:\Github - Repositorios\TicTacToe_SDL3\src\Renderer.cpp(91,32): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+D:\Github - Repositorios\TicTacToe_SDL3\src\Renderer.cpp(91,38): warning C4838: conversion from 'int' to 'float' requires a narrowing conversion
+D:\Github - Repositorios\TicTacToe_SDL3\src\Renderer.cpp(91,38): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
   Generating Code...
   TicTacToe_SDL.vcxproj -> D:\Github - Repositorios\TicTacToe_SDL3\x64\Debug\TicTacToe_SDL.exe

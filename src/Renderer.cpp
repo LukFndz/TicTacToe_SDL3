@@ -24,6 +24,52 @@ bool initSDL(SDLState& state, int width, int height)
     return true;
 }
 
+void drawWinLine(SDLState& state, const WinInfo& winInfo)
+{
+    if (winInfo.winner == CellState::Empty)
+        return;
+
+    int winW, winH;
+    SDL_GetWindowSize(state.window, &winW, &winH);
+
+    float cellW = winW / 3.0f;
+    float cellH = winH / 3.0f;
+
+    float x1 = 0, y1 = 0, x2 = 0, y2 = 0;
+
+    switch (winInfo.type)
+    {
+    case WinType::Row:
+        y1 = y2 = winInfo.index * cellH + cellH / 2;
+        x1 = 0;
+        x2 = winW;
+        break;
+
+    case WinType::Column:
+        x1 = x2 = winInfo.index * cellW + cellW / 2;
+        y1 = 0;
+        y2 = winH;
+        break;
+
+    case WinType::DiagonalMain:
+        x1 = 0; y1 = 0;
+        x2 = winW; y2 = winH;
+        break;
+
+    case WinType::DiagonalAnti:
+        x1 = winW; y1 = 0;
+        x2 = 0; y2 = winH;
+        break;
+
+    default:
+        return;
+    }
+    SDL_SetRenderDrawColor(state.renderer, 0, 255, 0, 255);
+    SDL_RenderLine(state.renderer, x1, y1, x2, y2);
+    SDL_SetRenderDrawColor(state.renderer, 0, 0, 0, 0);
+
+}
+
 // Load all textures once
 void loadTextures(SDLState& state)
 {
@@ -53,7 +99,7 @@ void drawBoard(SDLState& state, const Board& board)
     for (int row = 0; row < 3; ++row) {
         for (int col = 0; col < 3; ++col) {
 
-            const Cell& cell = board.cells[row][col];
+            const Cell& cell = board.getCell(row, col);
 
             if (cell.state == CellState::Empty)
                 continue;
@@ -64,7 +110,6 @@ void drawBoard(SDLState& state, const Board& board)
 
             SDL_Texture* tex = (cell.state == CellState::X) ? state.starTex : state.circleTex;
 
-            // Calcular tamaño
             SDL_FRect dest = {
                 col * cellW + cellW * (0.5f - 0.25f * scale),
                 row * cellH + cellH * (0.5f - 0.25f * scale),
@@ -74,12 +119,11 @@ void drawBoard(SDLState& state, const Board& board)
 
             SDL_SetTextureAlphaMod(tex, static_cast<Uint8>(255 * alpha));
             SDL_RenderTexture(state.renderer, tex, nullptr, &dest);
-            SDL_SetTextureAlphaMod(tex, 255); // Reset alpha
+            SDL_SetTextureAlphaMod(tex, 255);
         }
     }
-
-    SDL_RenderPresent(state.renderer);
 }
+
 
 // Free all resources
 void cleanup(SDLState& state)
